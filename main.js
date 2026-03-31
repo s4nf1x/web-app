@@ -190,7 +190,8 @@ function generateMockData() {
     };
 }
 
- let gateway = `ws://${window.location.hostname}:82/`;
+let protocol = window.location.protocol === "https:" ? "wss:" : "ws:";
+let gateway = `${protocol}//${window.location.host}/ws`;
         let websocket;
         window.addEventListener('load', onLoad);
         function initWebSocket() {

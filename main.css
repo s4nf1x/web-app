@@ -1691,16 +1691,12 @@ header {
   display: flex;
   width: 100px;
 }
-@media (max-width: 374px) {
-  .content .content_block#cross .frequency_block .frequency_levels_item .frequency_level_select .input, .content .content_block#eq .frequency_block .frequency_levels_item .frequency_level_select .input {
-    width: 60px;
-  }
-}
+
 .content .content_block#cross .frequency_block .frequency_levels_item .frequency_level_select .input .select-css, .content .content_block#eq .frequency_block .frequency_levels_item .frequency_level_select .input .select-css {
   display: none;
 }
 .content .content_block#cross .frequency_block .frequency_levels_item .frequency_level_select .input .select-selected, .content .content_block#eq .frequency_block .frequency_levels_item .frequency_level_select .input .select-selected {
-  width: 100px;
+  margin: 0 auto;
   text-align: center;
 }
 @media (max-width: 374px) {

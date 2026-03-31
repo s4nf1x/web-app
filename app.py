@@ -1,41 +1,41 @@
 from fastapi import FastAPI, WebSocket, WebSocketDisconnect
-from fastapi.staticfiles import StaticFiles
 from fastapi.responses import FileResponse
 import json
 import os
 
 app = FastAPI()
 
-# Раздача статических файлов (HTML, CSS, JS)
-app.mount("/web", StaticFiles(directory=".", html=True), name="web")
-
-# Данные по умолчанию (можно читать из settings*.ini)
-current_data = {
-    "Vol": -21,
-    "Mute": 1,
-    "Time": "00:00:00"
-}
-
+# Простая раздача статики
 @app.get("/")
 async def root():
+    return FileResponse("index.html")
+
+@app.get("/{path:path}")
+async def serve_static(path: str):
+    file_path = path
+    if os.path.exists(file_path):
+        return FileResponse(file_path)
     return FileResponse("index.html")
 
 @app.websocket("/ws")
 async def websocket_endpoint(websocket: WebSocket):
     await websocket.accept()
+    print("WebSocket клиент подключился")
     try:
         while True:
             data = await websocket.receive_text()
-            print(f"Received: {data}")
+            print(f"Получено: {data}")
 
-            # Обработка команд (упрощённо)
             if data.startswith("Vol:"):
-                current_data["Vol"] = int(data.split(":")[1])
-                await websocket.send_json({"Vol": current_data["Vol"]})
+                await websocket.send_json({"Vol": -21})
             elif data == "get_state":
-                await websocket.send_json(current_data)
+                await websocket.send_json({"Vol": -21, "Mute": 1})
             else:
-                # Здесь можно парсить JSON из main.js
-                pass
+                await websocket.send_json({"status": "ok"})
     except WebSocketDisconnect:
-        print("Client disconnected")
+        print("Клиент отключился")
+
+if __name__ == "__main__":
+    import uvicorn
+    port = int(os.environ.get("PORT", 8000))
+    uvicorn.run(app, host="0.0.0.0", port=port)

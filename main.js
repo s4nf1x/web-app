@@ -60,12 +60,21 @@ const ValueDegreeMap = {
 }
 
 
+
 const mockData = {
     EQ: {
-        eqHi:  { freq1:1000, gain1:0, q1:1, freq2:2000, gain2:0, q2:1, ... },
-        eqHiL: { ... },
-        eqHiR: { ... },
-        // аналогично для eqMid, eqLow, eqSub
+        eqHi:  { freq1:20, gain1:0, q1:1, freq2:32, gain2:0, q2:1, freq3:50, gain3:0, q3:1, freq4:80, gain4:0, q4:1, freq5:127, gain5:0, q5:1, freq6:200, gain6:0, q6:1, freq7:317, gain7:0, q7:1, freq8:503, gain8:0, q8:1, freq9:798, gain9:0, q9:1, freq10:1266, gain10:0, q10:1 },
+        eqHiL: { freq1:20, gain1:0, q1:1, freq2:32, gain2:0, q2:1, freq3:50, gain3:0, q3:1, freq4:80, gain4:0, q4:1, freq5:127, gain5:0, q5:1, freq6:200, gain6:0, q6:1, freq7:317, gain7:0, q7:1, freq8:503, gain8:0, q8:1, freq9:798, gain9:0, q9:1, freq10:1266, gain10:0, q10:1 },
+        eqHiR: { freq1:20, gain1:0, q1:1, freq2:32, gain2:0, q2:1, freq3:50, gain3:0, q3:1, freq4:80, gain4:0, q4:1, freq5:127, gain5:0, q5:1, freq6:200, gain6:0, q6:1, freq7:317, gain7:0, q7:1, freq8:503, gain8:0, q8:1, freq9:798, gain9:0, q9:1, freq10:1266, gain10:0, q10:1 },
+        eqMid: { freq1:20, gain1:0, q1:1, freq2:32, gain2:0, q2:1, freq3:50, gain3:0, q3:1, freq4:80, gain4:0, q4:1, freq5:127, gain5:0, q5:1, freq6:200, gain6:0, q6:1, freq7:317, gain7:0, q7:1, freq8:503, gain8:0, q8:1, freq9:798, gain9:0, q9:1, freq10:1266, gain10:0, q10:1 },
+        eqMidL: { freq1:20, gain1:0, q1:1, freq2:32, gain2:0, q2:1, freq3:50, gain3:0, q3:1, freq4:80, gain4:0, q4:1, freq5:127, gain5:0, q5:1, freq6:200, gain6:0, q6:1, freq7:317, gain7:0, q7:1, freq8:503, gain8:0, q8:1, freq9:798, gain9:0, q9:1, freq10:1266, gain10:0, q10:1 },
+        eqMidR: { freq1:20, gain1:0, q1:1, freq2:32, gain2:0, q2:1, freq3:50, gain3:0, q3:1, freq4:80, gain4:0, q4:1, freq5:127, gain5:0, q5:1, freq6:200, gain6:0, q6:1, freq7:317, gain7:0, q7:1, freq8:503, gain8:0, q8:1, freq9:798, gain9:0, q9:1, freq10:1266, gain10:0, q10:1 },
+        eqLow: { freq1:20, gain1:0, q1:1, freq2:32, gain2:0, q2:1, freq3:50, gain3:0, q3:1, freq4:80, gain4:0, q4:1, freq5:127, gain5:0, q5:1, freq6:200, gain6:0, q6:1, freq7:317, gain7:0, q7:1, freq8:503, gain8:0, q8:1, freq9:798, gain9:0, q9:1, freq10:1266, gain10:0, q10:1 },
+        eqLowL: { freq1:20, gain1:0, q1:1, freq2:32, gain2:0, q2:1, freq3:50, gain3:0, q3:1, freq4:80, gain4:0, q4:1, freq5:127, gain5:0, q5:1, freq6:200, gain6:0, q6:1, freq7:317, gain7:0, q7:1, freq8:503, gain8:0, q8:1, freq9:798, gain9:0, q9:1, freq10:1266, gain10:0, q10:1 },
+        eqLowR: { freq1:20, gain1:0, q1:1, freq2:32, gain2:0, q2:1, freq3:50, gain3:0, q3:1, freq4:80, gain4:0, q4:1, freq5:127, gain5:0, q5:1, freq6:200, gain6:0, q6:1, freq7:317, gain7:0, q7:1, freq8:503, gain8:0, q8:1, freq9:798, gain9:0, q9:1, freq10:1266, gain10:0, q10:1 },
+        eqSub: { freq1:20, gain1:0, q1:1, freq2:32, gain2:0, q2:1, freq3:50, gain3:0, q3:1, freq4:80, gain4:0, q4:1, freq5:127, gain5:0, q5:1, freq6:200, gain6:0, q6:1, freq7:317, gain7:0, q7:1, freq8:503, gain8:0, q8:1, freq9:798, gain9:0, q9:1, freq10:1266, gain10:0, q10:1 },
+        eqSubL: { freq1:20, gain1:0, q1:1, freq2:32, gain2:0, q2:1, freq3:50, gain3:0, q3:1, freq4:80, gain4:0, q4:1, freq5:127, gain5:0, q5:1, freq6:200, gain6:0, q6:1, freq7:317, gain7:0, q7:1, freq8:503, gain8:0, q8:1, freq9:798, gain9:0, q9:1, freq10:1266, gain10:0, q10:1 },
+        eqSubR: { freq1:20, gain1:0, q1:1, freq2:32, gain2:0, q2:1, freq3:50, gain3:0, q3:1, freq4:80, gain4:0, q4:1, freq5:127, gain5:0, q5:1, freq6:200, gain6:0, q6:1, freq7:317, gain7:0, q7:1, freq8:503, gain8:0, q8:1, freq9:798, gain9:0, q9:1, freq10:1266, gain10:0, q10:1 }
     },
     Volume: {
         master: -10,
@@ -75,14 +84,52 @@ const mockData = {
         stereoSub: 0, leftSub: 0, rightSub: 0
     },
     Cross: {
-        "Low-pass": { hiHz: 200, hiFilterOrd: 12, midHz: 800, ... },
-        "Hi-pass": { hiHz: 2000, hiFilterOrd: 12, ... }
+        "Low-pass": {
+            hiHz: 2000,   hiFilterOrd: 12,
+            midHz: 800,   midFilterOrd: 12,
+            lowHz: 200,   lowFilterOrd: 12,
+            subHz: 60,    subFilterOrd: 12
+        },
+        "Hi-pass": {
+            hiHz: 2000,   hiFilterOrd: 12,
+            midHz: 800,   midFilterOrd: 12,
+            lowHz: 200,   lowFilterOrd: 12,
+            subHz: 60,    subFilterOrd: 12
+        }
     },
-    Mute: { master: 0, leftHi:0, rightHi:0, leftMid:0, rightMid:0, leftLow:0, rightLow:0, leftSub:0, rightSub:0 },
-    Delay: { leftHi:0, rightHi:0, leftMid:0, rightMid:0, leftLow:0, rightLow:0, leftSub:0, rightSub:0 },
-    Phase: { leftHi:0, rightHi:0, leftMid:0, rightMid:0, leftLow:0, rightLow:0, leftSub:0, rightSub:0 },
-    Spdif: { spdifin:50, spdifinact:1, toslinkin:50, toslinkinact:0, usbin:50, usbinact:0, playerin:50, playerinact:0, protection:0 },
-    System: { timer: 30 }
+    Mute: {
+        master: 0,
+        leftHi: 0, rightHi: 0,
+        leftMid: 0, rightMid: 0,
+        leftLow: 0, rightLow: 0,
+        leftSub: 0, rightSub: 0
+    },
+    Delay: {
+        leftHi: 0, rightHi: 0,
+        leftMid: 0, rightMid: 0,
+        leftLow: 0, rightLow: 0,
+        leftSub: 0, rightSub: 0
+    },
+    Phase: {
+        leftHi: 0, rightHi: 0,
+        leftMid: 0, rightMid: 0,
+        leftLow: 0, rightLow: 0,
+        leftSub: 0, rightSub: 0
+    },
+    Spdif: {
+        spdifin: 50, spdifinact: 1,
+        toslinkin: 50, toslinkinact: 0,
+        usbin: 50, usbinact: 0,
+        playerin: 50, playerinact: 0,
+        protection: 0
+    },
+    System: {
+        timer: 30
+    },
+    Stereo: {
+        eqHi: 0, eqMid: 0, eqLow: 0, eqSub: 0,
+        crossHi: 0, crossMid: 0, crossLow: 0, crossSub: 0
+    }
 };
 
 class DataFromFile {
@@ -190,60 +237,59 @@ function generateMockData() {
     };
 }
 
-let protocol = window.location.protocol === "https:" ? "wss:" : "ws:";
-let gateway = `${protocol}//${window.location.host}/ws`;
-        let websocket;
-        window.addEventListener('load', onLoad);
-        function initWebSocket() {
-            websocket = new WebSocket(gateway);
-            websocket.onclose = onClose;
-            websocket.onmessage = onMessage;
-        }
-        function onClose(event) {
-            setTimeout(initWebSocket, 100);
-        }
-        function onMessage(event) {
-        var data = event.data;
-        console.log("Получено: " + data);
+let gateway = `ws://${window.location.hostname}:82/`;
+let websocket;
+window.addEventListener('load', onLoad);
+function initWebSocket() {
+    websocket = new WebSocket(gateway);
+    websocket.onclose = onClose;
+    websocket.onmessage = onMessage;
+}
+function onClose(event) {
+    setTimeout(initWebSocket, 100);
+}
+function onMessage(event) {
+    var data = event.data;
+    console.log("Получено: " + data);
 
 
 
 
-        var jsonData = JSON.parse(data);
+    var jsonData = JSON.parse(data);
 
-       for (let key in jsonData){
+    for (let key in jsonData){
 
 
         if (key === "Time") {
-                document.querySelector("#username").value = JSON.parse(event.data).Time;
-            }
-            if (key === "Vol") {
-                document.querySelector("#myRange").value = JSON.parse(event.data).Vol;
-            }
-            if (key === "Mute") {
-                document.querySelector('[name=switchers_all]').checked = JSON.parse(event.data).Mute;
-            }
+            document.querySelector("#username").value = JSON.parse(event.data).Time;
         }
+        if (key === "Vol") {
+            document.querySelector("#myRange").value = JSON.parse(event.data).Vol;
+        }
+        if (key === "Mute") {
+            document.querySelector('[name=switchers_all]').checked = JSON.parse(event.data).Mute;
+        }
+    }
 
 
 
-          //  document.querySelector("#state").textContent = state;
-           // document.querySelector("#myRange").textContent = "Slider value: " + JSON.parse(event.data).sliderValue;
-          //  document.querySelector("#myRange").value = JSON.parse(event.data).Vol;
-          //  document.querySelector('[name=switchers_all]').checked = JSON.parse(event.data).Mute;
-        }
+    //  document.querySelector("#state").textContent = state;
+    // document.querySelector("#myRange").textContent = "Slider value: " + JSON.parse(event.data).sliderValue;
+    //  document.querySelector("#myRange").value = JSON.parse(event.data).Vol;
+    //  document.querySelector('[name=switchers_all]').checked = JSON.parse(event.data).Mute;
+}
 
-        function onLoad(event) {
-         //   initWebSocket();
-           // document.getElementById('button').addEventListener('click', reset);
-        }
-        function reset() {
-            //websocket.send('reset');
-        }
-        function sendDats() {
-           // let sendValue = parseInt(document.getElementById('Slider').value).toString();
-           // websocket.send(sendValue);
-        }
+function onLoad(event) {
+    //   initWebSocket();
+    // document.getElementById('button').addEventListener('click', reset);
+}
+function reset() {
+    //websocket.send('reset');
+}
+function sendDats() {
+    // let sendValue = parseInt(document.getElementById('Slider').value).toString();
+    // websocket.send(sendValue);
+}
 
 
 let slideUp = (target, duration = 400) => {
@@ -753,12 +799,12 @@ window.onload = function () {
 
     /* Работа с файловой системой */
     async function getData() {
-		// return mockData;
-		return generateMockData();
+        // return mockData;
+        return generateMockData();
     }
 
     async function getProfileId() {
-		return 1; // активный профиль
+        return 1; // активный профиль
     }
 
     async function sendCommand(commandCode) {
@@ -771,7 +817,7 @@ window.onload = function () {
 
     async function updateData() {
 
-        )
+
         if (response.ok) {
             const data = await response.json();
         }
@@ -790,7 +836,7 @@ window.onload = function () {
     setInterval(() => {
         if (dataFromFile.needUpdate && !dataFromFile.loading) {
             dataFromFile.needUpdate = false;
-       //     updateData()
+            //     updateData()
         }
     }, 1000)
 
@@ -809,21 +855,21 @@ window.onload = function () {
     //Функция обновления  параметра эквалайзера  в файле EQ
     function updateEqualizerFileParameter(value, item, band, level) {
 
-    //const chartActive = select.closest('.settings_block').chart
+        //const chartActive = select.closest('.settings_block').chart
 
 
         let hiEqRLSelect;
         if(level === 0){
-        hiEqRLSelect = document.querySelector('.frequency_level_select input[name="eq[band][hi]"]');
+            hiEqRLSelect = document.querySelector('.frequency_level_select input[name="eq[band][hi]"]');
         }
-         if(level === 1){
-        hiEqRLSelect = document.querySelector('.frequency_level_select input[name="eq[band][mid]"]');
+        if(level === 1){
+            hiEqRLSelect = document.querySelector('.frequency_level_select input[name="eq[band][mid]"]');
         }
-         if(level === 2){
-        hiEqRLSelect = document.querySelector('.frequency_level_select input[name="eq[band][low]"]');
+        if(level === 2){
+            hiEqRLSelect = document.querySelector('.frequency_level_select input[name="eq[band][low]"]');
         }
-         if(level === 3){
-        hiEqRLSelect = document.querySelector('.frequency_level_select input[name="eq[band][sub]"]');
+        if(level === 3){
+            hiEqRLSelect = document.querySelector('.frequency_level_select input[name="eq[band][sub]"]');
         }
 
 
@@ -848,35 +894,35 @@ window.onload = function () {
         switch (item) {
             case "freq" ://!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                 if (hiEqRLSelect.value == "1"){
-                dataFromFile.file.EQ[currentLevelRight][`freq${band}`] = value * 1000;
+                    dataFromFile.file.EQ[currentLevelRight][`freq${band}`] = value * 1000;
                 }else if (hiEqRLSelect.value == "2") {
-                dataFromFile.file.EQ[currentLevelLeft][`freq${band}`] = value * 1000;
+                    dataFromFile.file.EQ[currentLevelLeft][`freq${band}`] = value * 1000;
                 }
                 else{
-                dataFromFile.file.EQ[currentLevelStereo][`freq${band}`] = value * 1000;
+                    dataFromFile.file.EQ[currentLevelStereo][`freq${band}`] = value * 1000;
                 }
                 break;
             case "gain" :
                 if (hiEqRLSelect.value == "1"){
-                dataFromFile.file.EQ[currentLevelRight][`gain${band}`] = value;
+                    dataFromFile.file.EQ[currentLevelRight][`gain${band}`] = value;
                 }else if (hiEqRLSelect.value == "2") {
-                dataFromFile.file.EQ[currentLevelLeft][`gain${band}`] = value;
+                    dataFromFile.file.EQ[currentLevelLeft][`gain${band}`] = value;
                 }else{
-                dataFromFile.file.EQ[currentLevelStereo][`gain${band}`] = value;
+                    dataFromFile.file.EQ[currentLevelStereo][`gain${band}`] = value;
                 }
                 break;
             case "qf" :
                 if (hiEqRLSelect.value == "1"){
-                dataFromFile.file.EQ[currentLevelRight][`q${band}`] = value;
+                    dataFromFile.file.EQ[currentLevelRight][`q${band}`] = value;
                 }else if (hiEqRLSelect.value == "2") {
-                dataFromFile.file.EQ[currentLevelLeft][`q${band}`] = value;
+                    dataFromFile.file.EQ[currentLevelLeft][`q${band}`] = value;
                 }else{
-                dataFromFile.file.EQ[currentLevelStereo][`q${band}`] = value;
+                    dataFromFile.file.EQ[currentLevelStereo][`q${band}`] = value;
                 }
                 break;
         }
 
-       // dataFromFile.file.EQ[currentLevelStereo]['stereo'] = hiEqRLSelect.value;
+        // dataFromFile.file.EQ[currentLevelStereo]['stereo'] = hiEqRLSelect.value;
 
         dataFromFile.needUpdate = true;
     }
@@ -894,7 +940,7 @@ window.onload = function () {
         dataFromFile.file.Spdif[field] = value;
         dataFromFile.needUpdate = true;
     }
-  function updateSystemFileParameter(value, field) {
+    function updateSystemFileParameter(value, field) {
         dataFromFile.file.System[field] = value;
         dataFromFile.needUpdate = true;
     }
@@ -903,13 +949,13 @@ window.onload = function () {
 
 
 
-function set_volume()
-{
-            const value = dataFromFile.file.Volume["master"];
-            const slider = document.querySelector('[name=myRange]');
-            slider.value = value;
-            updateSlider(slider);
-}
+    function set_volume()
+    {
+        const value = dataFromFile.file.Volume["master"];
+        const slider = document.querySelector('[name=myRange]');
+        slider.value = value;
+        updateSlider(slider);
+    }
 
 
 
@@ -1006,7 +1052,7 @@ function set_volume()
 
 
     const initDataFromFile = async () => {
-     //   const data = await getProfileId()
+        //   const data = await getProfileId()
         profileId = 1; // вернёт 1
         return mockData;
     }
@@ -1055,7 +1101,7 @@ function set_volume()
             dataFromFile.data.delay = data.Delay;
             dataFromFile.data.phase = data.Phase;
             dataFromFile.data.cross = formCrossData(data);
-           // dataFromFile.data.equalizer = formEqualizerData(data);
+            // dataFromFile.data.equalizer = formEqualizerData(data);
             dataFromFile.data.equalizer = updateToEqualizerGraphic(data, 0, 0);//all
             dataFromFile.file = data;
             dataFromFile.needUpdate = false;
@@ -1072,13 +1118,13 @@ function set_volume()
                         ],
 
                         //  tension: 0.4, // Создает плавную "кривую" EQ
-            pointRadius: 0, // Скрываем точки для чистоты линии
-                   //  borderWidth: 1,
-                   //         pointBorderWidth: 5,
-                       // borderRadius: 20,
+                        pointRadius: 0, // Скрываем точки для чистоты линии
+                        //  borderWidth: 1,
+                        //         pointBorderWidth: 5,
+                        // borderRadius: 20,
                         //pointBorderWidth: 5,
-                       // cubicInterpolationMode: 'monotone',
-                       // showLine: true
+                        // cubicInterpolationMode: 'monotone',
+                        // showLine: true
                     },
                         {
                             label: 'mid',
@@ -1118,35 +1164,35 @@ function set_volume()
                 options: {
                     tension: 0.3,//??????????/
                     elements: {
-                       	  point: {
-						     radius: 0
-					      },
+                        point: {
+                            radius: 0
+                        },
                     },
                     scales: {
                         x: {
-                type: 'logarithmic', // Важно для аудио графиков
-                min: 20,
-                max: 20000,
+                            type: 'logarithmic', // Важно для аудио графиков
+                            min: 20,
+                            max: 20000,
 
-                ticks: {
-                 maxTicksLimit: 5,//???????????????????????????????????????????
-                callback: function (val, index) {
-                if (val >= 1000) {
-                return val / 1000 + "k"
-                } else {
-                return val/1000
-                }
-  },
-                },
-                title: {
-                display: true,
-                text: 'Hz'
-                },
+                            ticks: {
+                                maxTicksLimit: 5,//???????????????????????????????????????????
+                                callback: function (val, index) {
+                                    if (val >= 1000) {
+                                        return val / 1000 + "k"
+                                    } else {
+                                        return val/1000
+                                    }
+                                },
+                            },
+                            title: {
+                                display: true,
+                                text: 'Hz'
+                            },
 
-            },
+                        },
                         y: {
 
-                       // type: 'logarithmic',
+                            // type: 'logarithmic',
                             ticks: {
                                 callback: function (value, index, ticks) {
                                     if (index === 0) {
@@ -1178,9 +1224,9 @@ function set_volume()
             /*Вставка данных из файла в граффик*/
             chartActiveEqualizer.data.datasets[0].data = prepareDateToEqualizerGraphic(dataFromFile, 0);
             /////////////chartActiveEqualizer.data.datasets[1].data = prepareDateToEqualizerGraphic(dataFromFile, 1);
-           /////////// chartActiveEqualizer.data.datasets[2].data = prepareDateToEqualizerGraphic(dataFromFile, 2);
-           //////////////// chartActiveEqualizer.data.datasets[3].data = prepareDateToEqualizerGraphic(dataFromFile, 3);
-           //////////// chartActiveEqualizer.update();
+            /////////// chartActiveEqualizer.data.datasets[2].data = prepareDateToEqualizerGraphic(dataFromFile, 2);
+            //////////////// chartActiveEqualizer.data.datasets[3].data = prepareDateToEqualizerGraphic(dataFromFile, 3);
+            //////////// chartActiveEqualizer.update();
             /*cross level select init from file*/
             const allLevelSelect = document.querySelectorAll('.frequency_level_select')
             allLevelSelect.forEach(item => {
@@ -1194,7 +1240,7 @@ function set_volume()
                 if (select) {
 
 
-if (select.name.includes('[hi]')) {
+                    if (select.name.includes('[hi]')) {
                         const channSwitchs = document.querySelectorAll('.frequency_level_select input[name="eq[band][hi]"]')
                         channSwitchs.forEach(item => {
                             item.addEventListener('input', () => {
@@ -1205,21 +1251,21 @@ if (select.name.includes('[hi]')) {
 
 
                                 if (item.value === "1"){
-                                index_data = updateToEqualizerGraphic(data, index + 1, 1);
-                                chartActiveEqualizer.data.datasets[index].borderDash = [2, 2];
+                                    index_data = updateToEqualizerGraphic(data, index + 1, 1);
+                                    chartActiveEqualizer.data.datasets[index].borderDash = [2, 2];
                                 } else if(item.value === "2" ){
-                                index_data = updateToEqualizerGraphic(data, index + 1, 2);
-                                chartActiveEqualizer.data.datasets[index].borderDash = [2, 2];
+                                    index_data = updateToEqualizerGraphic(data, index + 1, 2);
+                                    chartActiveEqualizer.data.datasets[index].borderDash = [2, 2];
                                 } else {
-                                index_data = updateToEqualizerGraphic(data, index + 1, 0);
-                                delete chartActiveEqualizer.data.datasets[index].borderDash;
+                                    index_data = updateToEqualizerGraphic(data, index + 1, 0);
+                                    delete chartActiveEqualizer.data.datasets[index].borderDash;
                                 }
 
 
                                 dataFromFile.data.equalizer[index] = index_data[index];
 
                                 //dataFromFile.data.equalizer = updateToEqualizerGraphic(data, 1);
-                             ///////////////////////////  chartActiveEqualizer.data.datasets[index].data = prepareDateToEqualizerGraphic(dataFromFile, index);
+                                ///////////////////////////  chartActiveEqualizer.data.datasets[index].data = prepareDateToEqualizerGraphic(dataFromFile, index);
 
                                 //update slider
                                 const freq = item.closest('.frequency_block').querySelector('.frequency_levels_item.equalizer.freq .frequency_range input');
@@ -1231,11 +1277,11 @@ if (select.name.includes('[hi]')) {
                                 qf.value = 1/(dataFromFile.data.equalizer[index][band-1][2].x - dataFromFile.data.equalizer[index][band-1][1].x) * 300;
 
                                 const updateSlider = (item) => {
-                                let percent = (item.value - item.min) / (item.max - item.min) * 100
-                                let percent1 = 100 - ((item.value - item.min) / (item.max - item.min) * 100);
-                                item.closest('.frequency_range').querySelector('.range_text .range_value .number').textContent = item.value;
-                                item.style.background =
-                                `linear-gradient(to right, #A482EE 0% ${percent}%, #535353 ${percent}% ${percent1}%)`
+                                    let percent = (item.value - item.min) / (item.max - item.min) * 100
+                                    let percent1 = 100 - ((item.value - item.min) / (item.max - item.min) * 100);
+                                    item.closest('.frequency_range').querySelector('.range_text .range_value .number').textContent = item.value;
+                                    item.style.background =
+                                        `linear-gradient(to right, #A482EE 0% ${percent}%, #535353 ${percent}% ${percent1}%)`
 
                                 }
                                 updateSlider(freq);
@@ -1246,12 +1292,12 @@ if (select.name.includes('[hi]')) {
                             })
                             item.dispatchEvent(event);
                         })
-}
+                    }
 
 
 
 
-if (select.name.includes('[mid]')) {
+                    if (select.name.includes('[mid]')) {
                         const channSwitchs = document.querySelectorAll('.frequency_level_select input[name="eq[band][mid]"]')
                         channSwitchs.forEach(item => {
                             item.addEventListener('input', () => {
@@ -1262,14 +1308,14 @@ if (select.name.includes('[mid]')) {
 
 
                                 if (item.value === "1"){
-                                index_data = updateToEqualizerGraphic(data, index + 1, 1);
-                                chartActiveEqualizer.data.datasets[index].borderDash = [2, 2];
+                                    index_data = updateToEqualizerGraphic(data, index + 1, 1);
+                                    chartActiveEqualizer.data.datasets[index].borderDash = [2, 2];
                                 } else if(item.value === "2" ){
-                                index_data = updateToEqualizerGraphic(data, index + 1, 2);
-                                chartActiveEqualizer.data.datasets[index].borderDash = [2, 2];
+                                    index_data = updateToEqualizerGraphic(data, index + 1, 2);
+                                    chartActiveEqualizer.data.datasets[index].borderDash = [2, 2];
                                 } else {
-                                index_data = updateToEqualizerGraphic(data, index + 1, 0);
-                                delete chartActiveEqualizer.data.datasets[index].borderDash;
+                                    index_data = updateToEqualizerGraphic(data, index + 1, 0);
+                                    delete chartActiveEqualizer.data.datasets[index].borderDash;
                                 }
 
 
@@ -1288,11 +1334,11 @@ if (select.name.includes('[mid]')) {
                                 qf.value = 1/(dataFromFile.data.equalizer[index][band-1][2].x - dataFromFile.data.equalizer[index][band-1][1].x) * 300;
 
                                 const updateSlider = (item) => {
-                                let percent = (item.value - item.min) / (item.max - item.min) * 100
-                                let percent1 = 100 - ((item.value - item.min) / (item.max - item.min) * 100);
-                                item.closest('.frequency_range').querySelector('.range_text .range_value .number').textContent = item.value;
-                                item.style.background =
-                                `linear-gradient(to right, #A482EE 0% ${percent}%, #535353 ${percent}% ${percent1}%)`
+                                    let percent = (item.value - item.min) / (item.max - item.min) * 100
+                                    let percent1 = 100 - ((item.value - item.min) / (item.max - item.min) * 100);
+                                    item.closest('.frequency_range').querySelector('.range_text .range_value .number').textContent = item.value;
+                                    item.style.background =
+                                        `linear-gradient(to right, #A482EE 0% ${percent}%, #535353 ${percent}% ${percent1}%)`
 
                                 }
                                 updateSlider(freq);
@@ -1303,8 +1349,8 @@ if (select.name.includes('[mid]')) {
                             })
                             item.dispatchEvent(event);
                         })
-}
-if (select.name.includes('[low]')) {
+                    }
+                    if (select.name.includes('[low]')) {
                         const channSwitchs = document.querySelectorAll('.frequency_level_select input[name="eq[band][low]"]')
                         channSwitchs.forEach(item => {
                             item.addEventListener('input', () => {
@@ -1315,21 +1361,21 @@ if (select.name.includes('[low]')) {
 
 
                                 if (item.value === "1"){
-                                index_data = updateToEqualizerGraphic(data, index + 1, 1);
-                                chartActiveEqualizer.data.datasets[index].borderDash = [2, 2];
+                                    index_data = updateToEqualizerGraphic(data, index + 1, 1);
+                                    chartActiveEqualizer.data.datasets[index].borderDash = [2, 2];
                                 } else if(item.value === "2" ){
-                                index_data = updateToEqualizerGraphic(data, index + 1, 2);
-                                chartActiveEqualizer.data.datasets[index].borderDash = [2, 2];
+                                    index_data = updateToEqualizerGraphic(data, index + 1, 2);
+                                    chartActiveEqualizer.data.datasets[index].borderDash = [2, 2];
                                 } else {
-                                index_data = updateToEqualizerGraphic(data, index + 1, 0);
-                                delete chartActiveEqualizer.data.datasets[index].borderDash;
+                                    index_data = updateToEqualizerGraphic(data, index + 1, 0);
+                                    delete chartActiveEqualizer.data.datasets[index].borderDash;
                                 }
 
 
                                 dataFromFile.data.equalizer[index] = index_data[index];
 
                                 //dataFromFile.data.equalizer = updateToEqualizerGraphic(data, 1);
-                               ////////////////////////////// chartActiveEqualizer.data.datasets[index].data = prepareDateToEqualizerGraphic(dataFromFile, index);
+                                ////////////////////////////// chartActiveEqualizer.data.datasets[index].data = prepareDateToEqualizerGraphic(dataFromFile, index);
 
                                 //update slider
                                 const freq = item.closest('.frequency_block').querySelector('.frequency_levels_item.equalizer.freq .frequency_range input');
@@ -1341,11 +1387,11 @@ if (select.name.includes('[low]')) {
                                 qf.value = 1/(dataFromFile.data.equalizer[index][band-1][2].x - dataFromFile.data.equalizer[index][band-1][1].x) * 300;
 
                                 const updateSlider = (item) => {
-                                let percent = (item.value - item.min) / (item.max - item.min) * 100
-                                let percent1 = 100 - ((item.value - item.min) / (item.max - item.min) * 100);
-                                item.closest('.frequency_range').querySelector('.range_text .range_value .number').textContent = item.value;
-                                item.style.background =
-                                `linear-gradient(to right, #A482EE 0% ${percent}%, #535353 ${percent}% ${percent1}%)`
+                                    let percent = (item.value - item.min) / (item.max - item.min) * 100
+                                    let percent1 = 100 - ((item.value - item.min) / (item.max - item.min) * 100);
+                                    item.closest('.frequency_range').querySelector('.range_text .range_value .number').textContent = item.value;
+                                    item.style.background =
+                                        `linear-gradient(to right, #A482EE 0% ${percent}%, #535353 ${percent}% ${percent1}%)`
 
                                 }
                                 //не сбрасывает
@@ -1357,8 +1403,8 @@ if (select.name.includes('[low]')) {
                             })
                             item.dispatchEvent(event);
                         })
-}
-if (select.name.includes('[sub]')) {
+                    }
+                    if (select.name.includes('[sub]')) {
                         const channSwitchs = document.querySelectorAll('.frequency_level_select input[name="eq[band][sub]"]')
                         channSwitchs.forEach(item => {
                             item.addEventListener('input', () => {
@@ -1369,21 +1415,21 @@ if (select.name.includes('[sub]')) {
 
 
                                 if (item.value === "1"){
-                                index_data = updateToEqualizerGraphic(data, index + 1, 1);
-                                chartActiveEqualizer.data.datasets[index].borderDash = [2, 2];
+                                    index_data = updateToEqualizerGraphic(data, index + 1, 1);
+                                    chartActiveEqualizer.data.datasets[index].borderDash = [2, 2];
                                 } else if(item.value === "2" ){
-                                index_data = updateToEqualizerGraphic(data, index + 1, 2);
-                                chartActiveEqualizer.data.datasets[index].borderDash = [2, 2];
+                                    index_data = updateToEqualizerGraphic(data, index + 1, 2);
+                                    chartActiveEqualizer.data.datasets[index].borderDash = [2, 2];
                                 } else {
-                                index_data = updateToEqualizerGraphic(data, index + 1, 0);
-                                delete chartActiveEqualizer.data.datasets[index].borderDash;
+                                    index_data = updateToEqualizerGraphic(data, index + 1, 0);
+                                    delete chartActiveEqualizer.data.datasets[index].borderDash;
                                 }
 
 
                                 dataFromFile.data.equalizer[index] = index_data[index];
 
                                 //dataFromFile.data.equalizer = updateToEqualizerGraphic(data, 1);
-                              ///////////////////////////  chartActiveEqualizer.data.datasets[index].data = prepareDateToEqualizerGraphic(dataFromFile, index);
+                                ///////////////////////////  chartActiveEqualizer.data.datasets[index].data = prepareDateToEqualizerGraphic(dataFromFile, index);
 
                                 //update slider
                                 const freq = item.closest('.frequency_block').querySelector('.frequency_levels_item.equalizer.freq .frequency_range input');
@@ -1395,11 +1441,11 @@ if (select.name.includes('[sub]')) {
                                 qf.value = 1/(dataFromFile.data.equalizer[index][band-1][2].x - dataFromFile.data.equalizer[index][band-1][1].x) * 300;
 
                                 const updateSlider = (item) => {
-                                let percent = (item.value - item.min) / (item.max - item.min) * 100
-                                let percent1 = 100 - ((item.value - item.min) / (item.max - item.min) * 100);
-                                item.closest('.frequency_range').querySelector('.range_text .range_value .number').textContent = item.value;
-                                item.style.background =
-                                `linear-gradient(to right, #A482EE 0% ${percent}%, #535353 ${percent}% ${percent1}%)`
+                                    let percent = (item.value - item.min) / (item.max - item.min) * 100
+                                    let percent1 = 100 - ((item.value - item.min) / (item.max - item.min) * 100);
+                                    item.closest('.frequency_range').querySelector('.range_text .range_value .number').textContent = item.value;
+                                    item.style.background =
+                                        `linear-gradient(to right, #A482EE 0% ${percent}%, #535353 ${percent}% ${percent1}%)`
 
                                 }
                                 //не сбрасывает
@@ -1411,17 +1457,17 @@ if (select.name.includes('[sub]')) {
                             })
                             item.dispatchEvent(event);
                         })
-}
+                    }
 
 
-                //????????????????????????????????
+                    //????????????????????????????????
 
 
                     if (select.name.includes('[hi]')) {
                         //if (initValue['leftHi'] !== initValue['rightHi']) {
-                          //  select.value = initValue['stereoHi'];
-                          //  select.closest('.input').querySelector('.select-selected').innerHTML = initValue['stereoHi'] + " dB"
-                       // }
+                        //  select.value = initValue['stereoHi'];
+                        //  select.closest('.input').querySelector('.select-selected').innerHTML = initValue['stereoHi'] + " dB"
+                        // }
                         const levelSwitchs = document.querySelectorAll('.frequency_level_select input[name="cross[volume][hi]"]')
                         levelSwitchs.forEach(item => {
                             item.value = "0"
@@ -1435,7 +1481,7 @@ if (select.name.includes('[sub]')) {
                                     levelUpdateOnGrafic(select.value, select)
                                     select.closest('.input').querySelector('.select-selected').innerHTML = dataFromFile.data.volume['rightHi'] + " dB"
                                 }
-                                 else {
+                                else {
                                     select.value = dataFromFile.data.volume['stereoHi'];
                                     levelUpdateOnGrafic(select.value, select)
                                     select.closest('.input').querySelector('.select-selected').innerHTML = dataFromFile.data.volume['stereoHi'] + " dB"
@@ -1443,13 +1489,13 @@ if (select.name.includes('[sub]')) {
                             })
                             item.dispatchEvent(event);
                         })
-}
+                    }
 
                     if (select.name.includes('[mid]')) {
                         //if (initValue['leftMid'] !== initValue['rightMid']) {
-                         //   select.value = initValue['stereoMid'];
-                         //   select.closest('.input').querySelector('.select-selected').innerHTML = initValue['stereoMid'] + " dB"
-                       // }
+                        //   select.value = initValue['stereoMid'];
+                        //   select.closest('.input').querySelector('.select-selected').innerHTML = initValue['stereoMid'] + " dB"
+                        // }
                         const levelSwitchs = document.querySelectorAll('.frequency_level_select input[name="cross[volume][mid]"]')
                         levelSwitchs.forEach(item => {
                             item.value = "0"
@@ -1476,10 +1522,10 @@ if (select.name.includes('[sub]')) {
 
                     }
                     if (select.name.includes('[low]')) {
-                       // if (initValue['leftLow'] !== initValue['rightLow']) {
-                           // select.value = initValue['stereoLow'];
-                         //   select.closest('.input').querySelector('.select-selected').innerHTML = initValue['stereoLow'] + " dB"
-                      //  }
+                        // if (initValue['leftLow'] !== initValue['rightLow']) {
+                        // select.value = initValue['stereoLow'];
+                        //   select.closest('.input').querySelector('.select-selected').innerHTML = initValue['stereoLow'] + " dB"
+                        //  }
                         const levelSwitchs = document.querySelectorAll('.frequency_level_select input[name="cross[volume][low]"]')
                         levelSwitchs.forEach(item => {
                             item.value = "0"
@@ -1506,8 +1552,8 @@ if (select.name.includes('[sub]')) {
 
                     }
                     if (select.name.includes('[sub]')) {
-                       // if (initValue['leftSub'] !== initValue['rightSub']) {
-                          //  select.value = initValue['stereoSub'];
+                        // if (initValue['leftSub'] !== initValue['rightSub']) {
+                        //  select.value = initValue['stereoSub'];
                         //    select.closest('.input').querySelector('.select-selected').innerHTML = initValue['stereoSub'] + " dB"
                         //}
                         const levelSwitchs = document.querySelectorAll('.frequency_level_select input[name="cross[volume][sub]"]')
@@ -1707,18 +1753,18 @@ if (select.name.includes('[sub]')) {
             chartActiveCross.data.datasets[2].data = dataFromFile.data.cross[2];
             chartActiveCross.data.datasets[3].data = dataFromFile.data.cross[3];
 
-           // if (dataFromFile.file.Volume.leftHi !== dataFromFile.file.Volume.rightHi) {
-          //      chartActiveCross.data.datasets[0].borderDash = [10, 5]
-          //  }
-         //   if (dataFromFile.file.Volume.leftMid !== dataFromFile.file.Volume.rightMid) {
-          //      chartActiveCross.data.datasets[1].borderDash = [10, 5]
-         //   }
-          //  if (dataFromFile.file.Volume.leftLow !== dataFromFile.file.Volume.rightLow) {
-         //       chartActiveCross.data.datasets[2].borderDash = [10, 5]
-          //  }
-         //   if (dataFromFile.file.Volume.leftSub !== dataFromFile.file.Volume.rightSub) {
-          //      chartActiveCross.data.datasets[3].borderDash = [10, 5]
-          //  }
+            // if (dataFromFile.file.Volume.leftHi !== dataFromFile.file.Volume.rightHi) {
+            //      chartActiveCross.data.datasets[0].borderDash = [10, 5]
+            //  }
+            //   if (dataFromFile.file.Volume.leftMid !== dataFromFile.file.Volume.rightMid) {
+            //      chartActiveCross.data.datasets[1].borderDash = [10, 5]
+            //   }
+            //  if (dataFromFile.file.Volume.leftLow !== dataFromFile.file.Volume.rightLow) {
+            //       chartActiveCross.data.datasets[2].borderDash = [10, 5]
+            //  }
+            //   if (dataFromFile.file.Volume.leftSub !== dataFromFile.file.Volume.rightSub) {
+            //      chartActiveCross.data.datasets[3].borderDash = [10, 5]
+            //  }
 
             chartActiveCross.update();
             /*Type init data from file*/
@@ -1860,39 +1906,39 @@ if (select.name.includes('[sub]')) {
                 })
             })
             //init System from file
-             const initSystem = () => {
+            const initSystem = () => {
 
-              const setSystemInput = () => {
+                const setSystemInput = () => {
                     const target = document.querySelector('.timer_settings')
                     const select = target.querySelector('.timer_settings_number_select')
                     const input = select.querySelector('input')
-                 //   const rangeInput = target.querySelector(' .timer_settings_number_select input')
+                    //   const rangeInput = target.querySelector(' .timer_settings_number_select input')
 
 
-                //    rangeInput.value = data.System.timer;
+                    //    rangeInput.value = data.System.timer;
                     input.value = data.System.timer;
 
 
                     input.addEventListener('input', () => {
-                     //   rangeInput.value = input.value;
+                        //   rangeInput.value = input.value;
                         const event = new Event('input', {
                             bubbles: true,
                             cancelable: true,
                         });
                         updateSystemFileParameter(parseInt(input.value), "timer")
-                       // rangeInput.dispatchEvent(event)
+                        // rangeInput.dispatchEvent(event)
                     })
-                 //   rangeInput.addEventListener('input', () => {
-                  //      input.value = rangeInput.value;
-                  //      updateSpDifFileParameter(parseInt(rangeInput.value), "spdifin")
-                //    })
+                    //   rangeInput.addEventListener('input', () => {
+                    //      input.value = rangeInput.value;
+                    //      updateSpDifFileParameter(parseInt(rangeInput.value), "spdifin")
+                    //    })
 
 
 
 
-              }
-setSystemInput();
-             }
+                }
+                setSystemInput();
+            }
 
 
 
@@ -1919,7 +1965,7 @@ setSystemInput();
                     })
 
                     if ((data.Spdif.spdifinact === 1 && data.Spdif.toslinkinact === 1) ||
-                    (data.Spdif.spdifinact === 0 && data.Spdif.toslinkinact === 0))
+                        (data.Spdif.spdifinact === 0 && data.Spdif.toslinkinact === 0))
                     {
 
                         updateSpDifFileParameter(1, "spdifinact")
@@ -2002,7 +2048,7 @@ setSystemInput();
                 }
 
 
-              const setUsbInput = () => {
+                const setUsbInput = () => {
                     const target = document.querySelector('.generator_settings_usb.input')
                     const btn = target.querySelector('.generator_settings_btn')
                     const select = target.querySelector('.generator_settings_number_select')
@@ -2045,7 +2091,7 @@ setSystemInput();
                 }
 
 
-                  const setPlayerInput = () => {
+                const setPlayerInput = () => {
                     const target = document.querySelector('.generator_settings_player.input')
                     const btn = target.querySelector('.generator_settings_btn')
                     const select = target.querySelector('.generator_settings_number_select')
@@ -2597,7 +2643,7 @@ setSystemInput();
     })
 
     PlayerInputVolume.addEventListener('click', () => {
-         const target = document.querySelector('.generator_settings_player.input')
+        const target = document.querySelector('.generator_settings_player.input')
         const select = target.querySelector('.generator_settings_number_select')
         const input = select.querySelector('input')
         const rangeInput = document.querySelector('.generator_settings_player.input .generator_settings_range_select input')
@@ -2617,28 +2663,28 @@ setSystemInput();
         }
     })
 
-     Protection.addEventListener('click', () => {
+    Protection.addEventListener('click', () => {
         const target = document.querySelector('.generator_settings_protection')
-       // const select = target.querySelector('.generator_settings_number_select')
+        // const select = target.querySelector('.generator_settings_number_select')
         //const input = select.querySelector('input')
         target.classList.toggle('active')
         if (target.classList.contains('active')) {
             Protection.innerHTML = 'Active'
-           // select.classList.add('active')
-          //  input.removeAttribute('disabled')
+            // select.classList.add('active')
+            //  input.removeAttribute('disabled')
             updateSpDifFileParameter(1, "protection")
         } else {
             Protection.innerHTML = 'Inactive'
-          //  select.classList.remove('active')
-          //  input.setAttribute('disabled', "true")
+            //  select.classList.remove('active')
+            //  input.setAttribute('disabled', "true")
             updateSpDifFileParameter(0, "protection")
         }
     })
 
 //new
 // System control number select's
- const SystemNumberSelects = document.querySelectorAll('.timer_settings_number_select')
- SystemNumberSelects.forEach((item) => {
+    const SystemNumberSelects = document.querySelectorAll('.timer_settings_number_select')
+    SystemNumberSelects.forEach((item) => {
         const input = item.querySelector('input');
         const rangeInput = item.parentElement.querySelector('.timer_settings_number_select input');
         const prev = item.querySelector('.prev');
@@ -2649,15 +2695,15 @@ setSystemInput();
         });
         prev.addEventListener('click', () => {
 
-                input.stepDown()
-                input.dispatchEvent(event)
+            input.stepDown()
+            input.dispatchEvent(event)
 
 
         })
         next.addEventListener('click', () => {
 
-                input.stepUp()
-                input.dispatchEvent(event)
+            input.stepUp()
+            input.dispatchEvent(event)
 
         })
     })
@@ -3100,17 +3146,17 @@ setSystemInput();
 
 
 
-      function updateSlider(item){
-                let percent = (item.value - item.min) / (item.max - item.min) * 100
-                let percent1 = 100 - ((item.value - item.min) / (item.max - item.min) * 100);
-                //item.closest('.frequency_range').querySelector('.range_text .range_value .number').textContent = item.value;
-                item.style.background =
-                    `linear-gradient(to right, #A482EE 0% ${percent}%, #535353 ${percent}% ${percent1}%)`
+    function updateSlider(item){
+        let percent = (item.value - item.min) / (item.max - item.min) * 100
+        let percent1 = 100 - ((item.value - item.min) / (item.max - item.min) * 100);
+        //item.closest('.frequency_range').querySelector('.range_text .range_value .number').textContent = item.value;
+        item.style.background =
+            `linear-gradient(to right, #A482EE 0% ${percent}%, #535353 ${percent}% ${percent1}%)`
 
-            }
+    }
 
 
-     // Range Volume  модальное окно и стрелки
+    // Range Volume  модальное окно и стрелки
     let allVolumeRangeBlocks = document.querySelectorAll('.volume_params');
     allVolumeRangeBlocks.forEach(function (item) {
 
@@ -3118,61 +3164,61 @@ setSystemInput();
 
 
 
-    const sliderInput = item.querySelector('.volume_range input')
+        const sliderInput = item.querySelector('.volume_range input')
 
-            const prev = document.querySelector('.prev')
-            const next = document.querySelector('.next')
-            let timerPrev;
-            let timerNext;
+        const prev = document.querySelector('.prev')
+        const next = document.querySelector('.next')
+        let timerPrev;
+        let timerNext;
 
-            prev?.addEventListener('click', () => {
+        prev?.addEventListener('click', () => {
 
-                const nextValue = parseFloat(sliderInput.value) - 2
+            const nextValue = parseFloat(sliderInput.value) - 2
+            if (nextValue >= -60 && nextValue <= 0) {
+                // rangeModalInput.value = nextValue.toFixed(2)
+                sliderInput.value = nextValue;
+                updateSlider(sliderInput);
+            }
+        })
+        next?.addEventListener('click', () => {
+
+            const nextValue = parseFloat(sliderInput.value) + 2
+            if (nextValue >= -60 && nextValue <= 0) {
+                //  rangeModalInput.value = nextValue.toFixed(2)
+                sliderInput.value = nextValue;
+                updateSlider(sliderInput);
+            }
+        })
+        prev.addEventListener('mouseup', () => {
+            clearInterval(timerPrev);
+        })
+        prev.addEventListener('mouseleave', () => {
+            clearInterval(timerPrev);
+        })
+        next.addEventListener('mouseup', () => {
+            clearInterval(timerNext);
+        })
+        next.addEventListener('mouseleave', () => {
+            clearInterval(timerNext);
+        })
+        prev.addEventListener('mousedown', () => {
+            timerPrev = setInterval(() => {
+                nextValue = parseFloat(sliderInput.value) - 1
                 if (nextValue >= -60 && nextValue <= 0) {
-                   // rangeModalInput.value = nextValue.toFixed(2)
-                   sliderInput.value = nextValue;
-                   updateSlider(sliderInput);
+                    sliderInput.value = nextValue;
+                    updateSlider(sliderInput);
                 }
-            })
-            next?.addEventListener('click', () => {
-
-                const nextValue = parseFloat(sliderInput.value) + 2
+            }, 50)
+        })
+        next.addEventListener('mousedown', () => {
+            timerNext = setInterval(() => {
+                nextValue = parseFloat(sliderInput.value) + 1
                 if (nextValue >= -60 && nextValue <= 0) {
-                  //  rangeModalInput.value = nextValue.toFixed(2)
-                  sliderInput.value = nextValue;
-               updateSlider(sliderInput);
+                    sliderInput.value = nextValue;
+                    updateSlider(sliderInput);
                 }
-            })
-                prev.addEventListener('mouseup', () => {
-                    clearInterval(timerPrev);
-                })
-                prev.addEventListener('mouseleave', () => {
-                    clearInterval(timerPrev);
-                })
-                next.addEventListener('mouseup', () => {
-                    clearInterval(timerNext);
-                })
-                next.addEventListener('mouseleave', () => {
-                    clearInterval(timerNext);
-                })
-                prev.addEventListener('mousedown', () => {
-                   timerPrev = setInterval(() => {
-                   nextValue = parseFloat(sliderInput.value) - 1
-                        if (nextValue >= -60 && nextValue <= 0) {
-                        sliderInput.value = nextValue;
-                      updateSlider(sliderInput);
-                        }
-                    }, 50)
-                })
-                next.addEventListener('mousedown', () => {
-                   timerNext = setInterval(() => {
-                   nextValue = parseFloat(sliderInput.value) + 1
-                        if (nextValue >= -60 && nextValue <= 0) {
-                        sliderInput.value = nextValue;
-                        updateSlider(sliderInput);
-                        }
-                    }, 50)
-                })
+            }, 50)
+        })
 
     })
 
@@ -3235,100 +3281,100 @@ setSystemInput();
 
     function updateToEqualizerGraphic(data, num, chann) {
 
-                const formDataRow = (item, index) => {
-                    return [{
-                        x: item[
-                            `freq${index}`
-                            ] - parseFloat(1/item[
-                            `q${index}`
-                            ]) * 600, y: 0
-                    },
-                        {
-                            x: item[
-                                `freq${index}`
-                                ] - parseFloat(1/item[
-                                `q${index}`
-                                ]) * 300, y: item[
-                                `gain${index}`
-                                ] / 3
-                        },
-                        {
-                            x: item[
-                                `freq${index}`
-                                ], y: item[
-                                `gain${index}`
-                                ]
-                        },
-                        {
-                            x: item[
-                                `freq${index}`
-                                ] +  parseFloat(1/item[
-                                `q${index}`
-                                ]) * 300, y: item[
-                                `gain${index}`
-                                ] / 3
-                        },
-                        {
-                            x: item[
-                                `freq${index}`
-                                ] + parseFloat(1/item[
-                                `q${index}`
-                                ]) * 600, y: 0
-                        }]
-                }
-                let newHiData = [];
-                let newMidData = [];
-                let newLowData = [];
-                let newSubData = [];
+        const formDataRow = (item, index) => {
+            return [{
+                x: item[
+                    `freq${index}`
+                    ] - parseFloat(1/item[
+                    `q${index}`
+                    ]) * 600, y: 0
+            },
+                {
+                    x: item[
+                        `freq${index}`
+                        ] - parseFloat(1/item[
+                        `q${index}`
+                        ]) * 300, y: item[
+                        `gain${index}`
+                        ] / 3
+                },
+                {
+                    x: item[
+                        `freq${index}`
+                        ], y: item[
+                        `gain${index}`
+                        ]
+                },
+                {
+                    x: item[
+                        `freq${index}`
+                        ] +  parseFloat(1/item[
+                        `q${index}`
+                        ]) * 300, y: item[
+                        `gain${index}`
+                        ] / 3
+                },
+                {
+                    x: item[
+                        `freq${index}`
+                        ] + parseFloat(1/item[
+                        `q${index}`
+                        ]) * 600, y: 0
+                }]
+        }
+        let newHiData = [];
+        let newMidData = [];
+        let newLowData = [];
+        let newSubData = [];
 
 
-                for (let i = 1; i <= 10; i++) {
+        for (let i = 1; i <= 10; i++) {
 
 
 
-               if(num === 0 || num === 1){
+            if(num === 0 || num === 1){
                 if (chann === 1) {
-                  newHiData.push(formDataRow(data.EQ.eqHiR, i));
+                    newHiData.push(formDataRow(data.EQ.eqHiR, i));
                 }else if (chann === 2) {
-                   newHiData.push(formDataRow(data.EQ.eqHiL, i));
+                    newHiData.push(formDataRow(data.EQ.eqHiL, i));
                 } else {
-                   newHiData.push(formDataRow(data.EQ.eqHi, i));
+                    newHiData.push(formDataRow(data.EQ.eqHi, i));
                 }
-}
-if(num === 0 || num === 2){
-                 if (chann === 1) {
+            }
+            if(num === 0 || num === 2){
+                if (chann === 1) {
                     newMidData.push(formDataRow(data.EQ.eqMidR, i));
                 }else if (chann === 2) {
                     newMidData.push(formDataRow(data.EQ.eqMidL, i));
                 } else {
                     newMidData.push(formDataRow(data.EQ.eqMid, i));
                 }
-}
-if(num === 0 || num === 3){
-                 if (chann === 1) {
+            }
+            if(num === 0 || num === 3){
+                if (chann === 1) {
                     newLowData.push(formDataRow(data.EQ.eqLowR, i));
                 }else if (chann === 2) {
                     newLowData.push(formDataRow(data.EQ.eqLowL, i));
                 } else {
                     newLowData.push(formDataRow(data.EQ.eqLow, i));
                 }
-}
-if(num === 0 || num === 4){
-                 if (chann === 1) {
+            }
+            if(num === 0 || num === 4){
+                if (chann === 1) {
                     newSubData.push(formDataRow(data.EQ.eqSubR, i));
                 }else if (chann === 2) {
                     newSubData.push(formDataRow(data.EQ.eqSubL, i));
                 } else {
                     newSubData.push(formDataRow(data.EQ.eqSub, i));
                 }
-}
+            }
 
-                  //  newHiData.push(formDataRow(data.EQ.eqHi, i));
-                    //newMidData.push(formDataRow(data.EQ.eqMid, i));
-                    //newLowData.push(formDataRow(data.EQ.eqLow, i));
-                    //newMasterData.push(formDataRow(data.EQ.eqSub, i));
-                }
-                return [newHiData, newMidData, newLowData, newSubData];
+            //  newHiData.push(formDataRow(data.EQ.eqHi, i));
+            //newMidData.push(formDataRow(data.EQ.eqMid, i));
+            //newLowData.push(formDataRow(data.EQ.eqLow, i));
+            //newMasterData.push(formDataRow(data.EQ.eqSub, i));
+        }
+        return [newHiData, newMidData, newLowData, newSubData];
 
 
     }
@@ -3337,158 +3383,158 @@ if(num === 0 || num === 4){
 
 //new
 
-class Complex {
-  constructor(real, imag) {
-    this.real = real;
-    this.imag = imag;
-  }
-
-  add(other) {
-    return new Complex(this.real + other.real, this.imag + other.imag);
-  }
-
-  mul(other) {
-    return new Complex(
-      this.real * other.real - this.imag * other.imag,
-      this.real * other.imag + this.imag * other.real
-    );
-  }
-
-  div(other) {
-    const denominator = other.real * other.real + other.imag * other.imag;
-    return new Complex(
-      (this.real * other.real + this.imag * other.imag) / denominator,
-      (this.imag * other.real - this.real * other.imag) / denominator
-    );
-  }
-
-   inv(other) {
-   const denominator = other.real * other.real + other.imag * other.imag;
-     return new Complex(
-      other.real / denominator,
-      -other.imag / denominator
-    );
-  }
-
-   abs() {
-    return Math.hypot(this.real, this.imag); // sqrt(real² + imag²)
-  }
-}
-
-
-
-
-function calcBinCoeffs(freq, gain, q)
-    {
-    let A = Math.pow(10, gain / 40);
-    let omega = 2 * Math.PI * freq / 48000;
-    let alpha = Math.sin(omega) / (2 * q);
-
-    let a0 = 1 + alpha / A;
-    let a1 = -2 * Math.cos(omega);
-    let a2 = 1 - alpha / A;
-    let b0 = 1 + alpha * A;
-    let b1 = -2 * Math.cos(omega);
-    let b2 = 1 - alpha * A;
-
-return [a0, a1, a2, b0, b1, b2];
-    }
-
-/*
-// calculate response of biquad filter
-function  calcResponse(coeff, freq, fs) {
-  let om = 2 * Match.PI *  freq / fs;
-  Complex x, y, z;
-
-  z.re = cos(om);
-  z.im = sin(om);
-  z = inv(z);
-
-  x = toComp(c.b0);
-  x = add(x, mul(toComp(c.b1), z));
-  x = add(x, mul(toComp(c.b2), mul(z, z)));
-
-  y = toComp(c.a0);
-  y = add(y, mul(toComp(c.a1), z));
-  y = add(y, mul(toComp(c.a2), mul(z, z)));
-
-  return mul(x, inv(y));
-}
-*/
-                    // Пример функции для генерации данных (упрощенная модель пикового фильтра)
-function generateEQData(coeffs) {
-    const points = [];
-// 2. Генерация точек (логарифмическая шкала от 20Гц до 20кГц)
-
-    let numPoints = 100;
-    for (let i = 0; i < numPoints; i ++) {
-
-
-    let f = 20 * Math.pow(20000 / 20, i / (numPoints - 1));
-    let w = 2 * Math.PI * f / 48000;
-
-    let z = new Complex(Math.cos(w), -Math.sin(w));
-   // z = z.inv(z);
-
-let hh = new Complex(1,0);
-
-    for(let y=0; y < coeffs.length ;y++)
-        {
-            let a0 = coeffs[y][0];
-            let a1 = coeffs[y][1];
-            let a2 = coeffs[y][2];
-            let b0 = coeffs[y][3];
-            let b1 = coeffs[y][4];
-            let b2 = coeffs[y][5];
-
-            // Вычисление числителя: b0 + b1*z + b2*z*z
-            let b0c = new Complex(b0, 0);
-            let b1c = new Complex(b1, 0);
-            let b2c = new Complex(b2, 0);
-
-
-  //x = toComp(c.b0);
-  //x = add(x, mul(toComp(c.b1), z));
-  //x = add(x, mul(toComp(c.b2), mul(z, z)));
-            let numerator = b0c.add(b1c.mul(z)).add(b2c.mul(z.mul(z)));
-
-            // Вычисление знаменателя: a0 + a1*z + a2*z*z
-            let a0c = new Complex(a0, 0);
-            let a1c = new Complex(a1, 0);
-            let a2c = new Complex(a2, 0);
-
-  //y = toComp(c.a0);
-  //y = add(y, mul(toComp(c.a1), z));
-  //y = add(y, mul(toComp(c.a2), mul(z, z)));
-
-            let denominator = a0c.add(a1c.mul(z)).add(a2c.mul(z.mul(z)));
-
-            // Деление
-            let h = numerator.div(denominator);
-
-
-        //  return mul(x, inv(y));
-
-
-            hh = hh.mul(h);//mul
+    class Complex {
+        constructor(real, imag) {
+            this.real = real;
+            this.imag = imag;
         }
 
-   // g = 10 * log10(r.re * r.re + r.im * r.im);
-  //      g += setting.totalGain;
-   //     float y = GAIN_TO_Y(g);
+        add(other) {
+            return new Complex(this.real + other.real, this.imag + other.imag);
+        }
+
+        mul(other) {
+            return new Complex(
+                this.real * other.real - this.imag * other.imag,
+                this.real * other.imag + this.imag * other.real
+            );
+        }
+
+        div(other) {
+            const denominator = other.real * other.real + other.imag * other.imag;
+            return new Complex(
+                (this.real * other.real + this.imag * other.imag) / denominator,
+                (this.imag * other.real - this.real * other.imag) / denominator
+            );
+        }
+
+        inv(other) {
+            const denominator = other.real * other.real + other.imag * other.imag;
+            return new Complex(
+                other.real / denominator,
+                -other.imag / denominator
+            );
+        }
+
+        abs() {
+            return Math.hypot(this.real, this.imag); // sqrt(real² + imag²)
+        }
+    }
+
+
+
+
+    function calcBinCoeffs(freq, gain, q)
+    {
+        let A = Math.pow(10, gain / 40);
+        let omega = 2 * Math.PI * freq / 48000;
+        let alpha = Math.sin(omega) / (2 * q);
+
+        let a0 = 1 + alpha / A;
+        let a1 = -2 * Math.cos(omega);
+        let a2 = 1 - alpha / A;
+        let b0 = 1 + alpha * A;
+        let b1 = -2 * Math.cos(omega);
+        let b2 = 1 - alpha * A;
+
+        return [a0, a1, a2, b0, b1, b2];
+    }
+
+    /*
+    // calculate response of biquad filter
+    function  calcResponse(coeff, freq, fs) {
+      let om = 2 * Match.PI *  freq / fs;
+      Complex x, y, z;
+
+      z.re = cos(om);
+      z.im = sin(om);
+      z = inv(z);
+
+      x = toComp(c.b0);
+      x = add(x, mul(toComp(c.b1), z));
+      x = add(x, mul(toComp(c.b2), mul(z, z)));
+
+      y = toComp(c.a0);
+      y = add(y, mul(toComp(c.a1), z));
+      y = add(y, mul(toComp(c.a2), mul(z, z)));
+
+      return mul(x, inv(y));
+    }
+    */
+    // Пример функции для генерации данных (упрощенная модель пикового фильтра)
+    function generateEQData(coeffs) {
+        const points = [];
+// 2. Генерация точек (логарифмическая шкала от 20Гц до 20кГц)
+
+        let numPoints = 100;
+        for (let i = 0; i < numPoints; i ++) {
+
+
+            let f = 20 * Math.pow(20000 / 20, i / (numPoints - 1));
+            let w = 2 * Math.PI * f / 48000;
+
+            let z = new Complex(Math.cos(w), -Math.sin(w));
+            // z = z.inv(z);
+
+            let hh = new Complex(1,0);
+
+            for(let y=0; y < coeffs.length ;y++)
+            {
+                let a0 = coeffs[y][0];
+                let a1 = coeffs[y][1];
+                let a2 = coeffs[y][2];
+                let b0 = coeffs[y][3];
+                let b1 = coeffs[y][4];
+                let b2 = coeffs[y][5];
+
+                // Вычисление числителя: b0 + b1*z + b2*z*z
+                let b0c = new Complex(b0, 0);
+                let b1c = new Complex(b1, 0);
+                let b2c = new Complex(b2, 0);
+
+
+                //x = toComp(c.b0);
+                //x = add(x, mul(toComp(c.b1), z));
+                //x = add(x, mul(toComp(c.b2), mul(z, z)));
+                let numerator = b0c.add(b1c.mul(z)).add(b2c.mul(z.mul(z)));
+
+                // Вычисление знаменателя: a0 + a1*z + a2*z*z
+                let a0c = new Complex(a0, 0);
+                let a1c = new Complex(a1, 0);
+                let a2c = new Complex(a2, 0);
+
+                //y = toComp(c.a0);
+                //y = add(y, mul(toComp(c.a1), z));
+                //y = add(y, mul(toComp(c.a2), mul(z, z)));
+
+                let denominator = a0c.add(a1c.mul(z)).add(a2c.mul(z.mul(z)));
+
+                // Деление
+                let h = numerator.div(denominator);
+
+
+                //  return mul(x, inv(y));
+
+
+                hh = hh.mul(h);//mul
+            }
+
+            // g = 10 * log10(r.re * r.re + r.im * r.im);
+            //      g += setting.totalGain;
+            //     float y = GAIN_TO_Y(g);
 
 
 
 //let magnitudeDb = 20 * Math.log10(hh.abs(hh));
-  let magnitudeDb = 10 * Math.log10(hh.real * hh.real + hh.imag * hh.imag);
+            let magnitudeDb = 10 * Math.log10(hh.real * hh.real + hh.imag * hh.imag);
 
-  //  let y = GAIN_TO_Y(g);
-    points.push({x: f, y: magnitudeDb});
+            //  let y = GAIN_TO_Y(g);
+            points.push({x: f, y: magnitudeDb});
 
 
+        }
+        return points;
     }
-    return points;
-}
 //new
 
 
@@ -3501,34 +3547,34 @@ let hh = new Complex(1,0);
 
         let result = []
 
-    const data = JSON.parse(JSON.stringify(dataFromFile.data.equalizer[index]));
+        const data = JSON.parse(JSON.stringify(dataFromFile.data.equalizer[index]));
 
-   // let freq = data[index][2].x;
-   // let gain = dataFromFile.data.equalizer[index][1 - 1][2].y;
-   // let q = 1/(dataFromFile.data.equalizer[index][1 - 1][2].x - dataFromFile.data.equalizer[index][1 - 1][1].x) * 300;
+        // let freq = data[index][2].x;
+        // let gain = dataFromFile.data.equalizer[index][1 - 1][2].y;
+        // let q = 1/(dataFromFile.data.equalizer[index][1 - 1][2].x - dataFromFile.data.equalizer[index][1 - 1][1].x) * 300;
 //
- //const freq = select.closest('.frequency_block').querySelector('.frequency_levels_item.equalizer.freq .frequency_range input');
- //const gain = select.closest('.frequency_block').querySelector('.frequency_levels_item.equalizer.gain .frequency_range input');
+        //const freq = select.closest('.frequency_block').querySelector('.frequency_levels_item.equalizer.freq .frequency_range input');
+        //const gain = select.closest('.frequency_block').querySelector('.frequency_levels_item.equalizer.gain .frequency_range input');
 // const qf = select.closest('.frequency_block').querySelector('.frequency_levels_item.equalizer.qf .frequency_range input');
 //console.log(qf*4);
 
-let coeffs = [];
+        let coeffs = [];
 
-for (let i = 0; i < 10; i++) {
+        for (let i = 0; i < 10; i++) {
 
 
-    let freq = data[i][2].x;
-    let gain = data[i][2].y;
-    let q = 1/(data[i][2].x - data[i][1].x) * 300;
+            let freq = data[i][2].x;
+            let gain = data[i][2].y;
+            let q = 1/(data[i][2].x - data[i][1].x) * 300;
 
 
 // 1. Расчет коэффициентов Biquad (RBJ Cookbook)
-    coeffs.push(calcBinCoeffs(freq, gain, q));
-}
+            coeffs.push(calcBinCoeffs(freq, gain, q));
+        }
 
-result = generateEQData(coeffs);
+        result = generateEQData(coeffs);
 
-return result;
+        return result;
 
         //return [{x: -50000, y: 0}, ...result, {x: 50000, y: 0}]
     }
@@ -3589,17 +3635,17 @@ return result;
 
 
 // Функция для прореживания массива (каждый n-й элемент)
-function downsample(data, threshold) {
-  const size = data.length;
-  if (size <= threshold) return data;
+            function downsample(data, threshold) {
+                const size = data.length;
+                if (size <= threshold) return data;
 
-  const step = Math.floor(size / threshold);
-  let newArray = [];
-  for (let i = 0; i < size; i += step) {
-    newArray.push(data[i]);
-  }
-  return newArray;
-}
+                const step = Math.floor(size / threshold);
+                let newArray = [];
+                for (let i = 0; i < size; i += step) {
+                    newArray.push(data[i]);
+                }
+                return newArray;
+            }
 
 
 
@@ -3628,7 +3674,7 @@ function downsample(data, threshold) {
                 updateEqualizerFileParameter(parseFloat(this.value), "freq", band, index);
                 chartActive.data.datasets[index].data = prepareDateToEqualizerGraphic(dataFromFile, index);
 
-const arr = 0;//generateEQData22(this.value*1000,9, 10);///prepareDateToEqualizerGraphic(dataFromFile, index);
+                const arr = 0;//generateEQData22(this.value*1000,9, 10);///prepareDateToEqualizerGraphic(dataFromFile, index);
 ////////////const arr = prepareDateToEqualizerGraphic(dataFromFile, index);
 
 /////////const x = arr.map(point => point.x);
@@ -3639,12 +3685,12 @@ const arr = 0;//generateEQData22(this.value*1000,9, 10);///prepareDateToEqualize
 //const updatedCoords = arr.map(([x, y]) => [new_xValues, y]);
 ///////////////var updatedPoints = new Array();
 /////////////////for(var i = 0; i<x.length; i++){
-  /////////////  updatedPoints.push({x: newXValue[i], y: y[i]});
+                /////////////  updatedPoints.push({x: newXValue[i], y: y[i]});
 //////////////////}
 
 
- ////////chartActive.data.datasets[index].data = arr;
-              // chartActive.data.datasets[index].data = updatedPoints;
+                ////////chartActive.data.datasets[index].data = arr;
+                // chartActive.data.datasets[index].data = updatedPoints;
 
             }
             const updateEqualizerGraphicGain = (index, band) => {
@@ -3655,7 +3701,7 @@ const arr = 0;//generateEQData22(this.value*1000,9, 10);///prepareDateToEqualize
                 editingBandData[3].y = editingBandData[3].y + delta / 3;
                 dataFromFile.data.equalizer[index][band - 1] = editingBandData;
                 updateEqualizerFileParameter(parseFloat(this.value), "gain", band, index)
-               chartActive.data.datasets[index].data = prepareDateToEqualizerGraphic(dataFromFile, index);
+                chartActive.data.datasets[index].data = prepareDateToEqualizerGraphic(dataFromFile, index);
             }
             const updateEqualizerGraphicQf = (index, band) => {
                 let editingBandData = dataFromFile.data.equalizer[index][band - 1];
@@ -3665,7 +3711,7 @@ const arr = 0;//generateEQData22(this.value*1000,9, 10);///prepareDateToEqualize
                 editingBandData[4].x = editingBandData[2].x + parseFloat(1 / this.value) * 600;
                 dataFromFile.data.equalizer[index][band - 1] = editingBandData;
                 updateEqualizerFileParameter(parseFloat(this.value), "qf", band, index)
-               chartActive.data.datasets[index].data = prepareDateToEqualizerGraphic(dataFromFile, index);
+                chartActive.data.datasets[index].data = prepareDateToEqualizerGraphic(dataFromFile, index);
             }
 
             if (buttonHigh) {
@@ -3813,7 +3859,7 @@ const arr = 0;//generateEQData22(this.value*1000,9, 10);///prepareDateToEqualize
         let percent1 = 100 - ((item.value - item.min) / (item.max - item.min) * 100);
         item.style.background =
             `linear-gradient(to right, #A482EE 0% ${percent}%, #535353 ${percent}% ${percent1}%)`
- ///console.log(item.classList);
+        ///console.log(item.classList);
         if (!item.classList.contains('custom') && item.name !== 'myRange') {
             item.parentNode.parentNode.querySelector('.range_text .range_value .number').textContent = item.value
             item.oninput = onRangeValueUpdate;
@@ -3867,51 +3913,51 @@ const arr = 0;//generateEQData22(this.value*1000,9, 10);///prepareDateToEqualize
                 Common.classList.add('active');
                 R.classList.remove('active');
                 L.classList.remove('active')
-               // LR.classList.remove('active')
-               // LR.querySelector('.right').classList.remove('active')
-               // LR.querySelector('.left').classList.remove('active')
+                // LR.classList.remove('active')
+                // LR.querySelector('.right').classList.remove('active')
+                // LR.querySelector('.left').classList.remove('active')
             } else if (value === "1") {
                 Common.classList.remove('active')
                 R.classList.add('active');
                 L.classList.remove('active')
-               // LR.classList.add('active')
-               // LR.querySelector('.right').classList.add('active')
-               // LR.querySelector('.left').classList.remove('active')
+                // LR.classList.add('active')
+                // LR.querySelector('.right').classList.add('active')
+                // LR.querySelector('.left').classList.remove('active')
             } else if (value === "2") {
                 Common.classList.remove('active')
                 R.classList.remove('active');
                 L.classList.add('active')
-               // LR.classList.add('active')
-               // LR.querySelector('.left').classList.add('active')
-               // LR.querySelector('.right').classList.remove('active')
+                // LR.classList.add('active')
+                // LR.querySelector('.left').classList.add('active')
+                // LR.querySelector('.right').classList.remove('active')
             }
-let name = "";
-if(input.name === ('eq[band][hi]'))
-name = 'eqHi';
-if(input.name === ('eq[band][mid]'))
-name = 'eqMid';
-if(input.name === ('eq[band][low]'))
-name = 'eqLow';
-if(input.name === ('eq[band][sub]'))
-name = 'eqSub';
+            let name = "";
+            if(input.name === ('eq[band][hi]'))
+                name = 'eqHi';
+            if(input.name === ('eq[band][mid]'))
+                name = 'eqMid';
+            if(input.name === ('eq[band][low]'))
+                name = 'eqLow';
+            if(input.name === ('eq[band][sub]'))
+                name = 'eqSub';
 
-if(input.name === ('cross[volume][hi]'))
-name = 'crossHi';
-if(input.name === ('cross[volume][mid]'))
-name = 'crossMid';
-if(input.name === ('cross[volume][low]'))
-name = 'crossLow';
-if(input.name === ('cross[volume][sub]'))
-name = 'crossSub';
-
-
+            if(input.name === ('cross[volume][hi]'))
+                name = 'crossHi';
+            if(input.name === ('cross[volume][mid]'))
+                name = 'crossMid';
+            if(input.name === ('cross[volume][low]'))
+                name = 'crossLow';
+            if(input.name === ('cross[volume][sub]'))
+                name = 'crossSub';
 
 
-                if(name)
-                {
+
+
+            if(name)
+            {
                 dataFromFile.file.Stereo[name] = parseInt(item.value);
                 dataFromFile.needUpdate = true;
-                }
+            }
         }
         Common.addEventListener('click', () => {
             sameInputs.forEach(input => {
@@ -3920,13 +3966,13 @@ name = 'crossSub';
             });
         })
         L.addEventListener('click', () => {
-             sameInputs.forEach(input => {
+            sameInputs.forEach(input => {
                 input.value = "2"
                 input.dispatchEvent(event);
             });
         })
         R.addEventListener('click', () => {
-             sameInputs.forEach(input => {
+            sameInputs.forEach(input => {
                 input.value = "1"
                 input.dispatchEvent(event);
             });

@@ -1784,14 +1784,12 @@ header {
   justify-content: space-between;
   align-items: center;
   padding-top: 10px;
-  padding-left: 10px;
 }
 .content .content_block#cross .frequency_block .frequency_levels_item .band_number_select .title, .content .content_block#eq .frequency_block .frequency_levels_item .band_number_select .title {
   font-weight: 500;
   font-size: 14px;
   line-height: 17px;
   color: #A7A7A7;
-  width: 100px;
 }
 .content .content_block#cross .frequency_block .frequency_levels_item .band_number_select .input, .content .content_block#eq .frequency_block .frequency_levels_item .band_number_select .input {
   position: relative;
@@ -2842,6 +2840,7 @@ header {
   margin: auto;
   transition: 0.3s all ease;
 }
+
 @media (max-width: 380px) {
   .swticher_block {
     margin-bottom: 15px;

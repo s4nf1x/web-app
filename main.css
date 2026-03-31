@@ -2852,6 +2852,9 @@ header {
     flex-direction: column;
     align-items: flex-start;
   }
+  .content .content_block#cross .frequency_block .frequency_levels_item .band_number_select, .content .content_block#eq .frequency_block .frequency_levels_item .band_number_select {
+    align-items: flex-end;
+  }
 }
 
 .frequency_select {

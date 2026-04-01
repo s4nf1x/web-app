@@ -1806,6 +1806,7 @@ header {
   left: 0;
   right: 0;
   z-index: 999;
+  width: fit-content;
 }
 .content .content_block#cross .frequency_block .frequency_levels_item .band_number_select .input .select-items div, .content .content_block#eq .frequency_block .frequency_levels_item .band_number_select .input .select-items div {
   padding: 5px;

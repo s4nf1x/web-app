@@ -2922,10 +2922,10 @@ header {
     flex-direction: column;
   }
   .content .content_block#cross .frequency_block .frequency_levels_item.active, .content .content_block#eq .frequency_block .frequency_levels_item.active {
-    height: 256px;
+    height: initial;
   }
   .content .content_block#cross .frequency_block .frequency_levels_item.active.equalizer, .content .content_block#eq .frequency_block .frequency_levels_item.active.equalizer {
-    height: 192px;
+    height: initial;
   }
   .content .content_block#cross .frequency_block .frequency_levels_item .frequency_level_select, .content .content_block#eq .frequency_block .frequency_levels_item .frequency_level_select {
     align-items: flex-end;

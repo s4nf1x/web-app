@@ -2921,8 +2921,8 @@ header {
   .content .content_block#cross .frequency_block .frequency_levels_item .frequency_level_select .title, .content .content_block#eq .frequency_block .frequency_levels_item .frequency_level_select .title {
     flex-direction: column;
   }
-  .content .content_block#cross .frequency_block .frequency_levels_item.active.equalizer, .content .content_block#eq .frequency_block .frequency_levels_item.active.equalizer {
-    height: 182px;
+  .content .content_block#cross .frequency_block .frequency_levels_item.active, .content .content_block#eq .frequency_block .frequency_levels_item.active {
+    height: 256px;
   }
 }
 
